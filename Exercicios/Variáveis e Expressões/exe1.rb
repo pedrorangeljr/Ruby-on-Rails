@@ -1,0 +1,1 @@
+print "digite um número: ";
