@@ -7,3 +7,17 @@ peso ideal, utilizando as seguintes fórmulas (onde h corresponde à altura):
 
 =end
 
+print "Digite altura: "
+h = gets.to_f
+print "Digite sexo: "
+sexo = gets.to_s
+
+if sexo == 'm'
+
+  printf("Seu peso ideal: %.1f\n", (72.7 * h) - 58)
+
+elsif sexo == 'f'
+
+  printf("Seu peso ideal :%.1f\n", (62.1 * h) -  44.7)
+
+end
