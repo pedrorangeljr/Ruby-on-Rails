@@ -15,3 +15,5 @@ soma = 0
 end
 
 puts "A soma dos 50 primeiros números pares: #{soma}"
+
+# poderia ser feito com PA
