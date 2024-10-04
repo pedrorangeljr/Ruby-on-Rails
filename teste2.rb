@@ -22,3 +22,5 @@ end
 
 a = [1,2,3,4,5].select{|i| i >= 4}
 puts a.to_s
+
+ puts odds = (1..10).reject {|x| x % 2 == 0}.join(", ")
