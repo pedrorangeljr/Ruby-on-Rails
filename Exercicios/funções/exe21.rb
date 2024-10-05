@@ -1,20 +1,25 @@
 =begin 
 
-Escreva uma função que gera um triângulo lateral de altura 2*n-1 e n largura. Por exem-
-plo, a saı́da para n = 4 seria:
-
-*
-**
-***
-****
-***
-**
-*
+Faça uma função que receba um vetor de inteiros e retorne quantos valores pares ele
+possui.
 
 =end
 
-def linnha(n)
-  (1..n).each do |i|
-    puts '*'* 2*i-1
+def contar_pares(vetor)
+  contador = 0
+
+  vetor.each do |j| 
+    contador += 1 if j.even?
   end
+
+  contador
 end
+
+print "Digite os números separados por espaço: "
+entrada = gets.chomp
+
+vetor = entrada.split.map(&:to_i)
+
+quantidade_pares = contar_pares(vetor)
+
+puts "A quantidad de números pares é: #{quantidade_pares}"
