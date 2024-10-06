@@ -3,13 +3,22 @@
 # sem repetição.
 # 
  
-def numeros_aleatorios(vetor, tamanho)
-  
-  raise ArgumentError, "O tamnho deve ser menor ou igual a 10" if tamanho > 10
+def preencher_vetor_aleatorio(tamanho, min, max)
+  raise "Não há números suficientes no intervalo para preencher o vetor." if max - min + 1 < tamanho
 
-  numeros_possiveis = (1..10).to_a
+  numeros = []
 
-  vetor.concat(numeros_possiveis.shuffle.first(tamanho))  
-  
+  while numeros.length < tamanho
+    numero_aleatorio = rand(min..max)
+    numeros << numero_aleatorio unless numeros.include?(numero_aleatorio)
+  end
+
+  numeros
 end
 
+# Exemplo de uso:
+tamanho_vetor = 10
+min = 1
+max = 20
+vetor_aleatorio = preencher_vetor_aleatorio(tamanho_vetor, min, max)
+puts vetor_aleatorio.inspect
