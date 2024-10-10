@@ -21,3 +21,14 @@ s = "hello"
 puts s.enum_for(:each_char).map {|c| c.succ}.join(", ")
 
 puts "hello".chars.map{|c| c.succ}.join(", ")
+
+interator = 9.downto(1) # funciona como um decremento
+
+loop do 
+  print interator.next
+end
+
+puts "...blastoff!"
+
+a,b,c = [1,2,3], 4..6, 'a'..'e'
+bundle(a,b,c) {|x| print x}
